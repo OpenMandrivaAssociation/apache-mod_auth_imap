@@ -6,7 +6,7 @@
 Summary:	Provides authentication against an IMAP mail server
 Name:		apache-%{mod_name}
 Version:	2.2.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		System/Servers
 License:	GPL
 URL:		http://ben.brillat.net/projects/mod_auth_imap/
@@ -49,9 +49,6 @@ install -d %{buildroot}%{_sysconfdir}/httpd/modules.d
 install -m0755 .libs/*.so %{buildroot}%{_libdir}/apache-extramodules/
 bzcat %{SOURCE1} > %{buildroot}%{_sysconfdir}/httpd/modules.d/%{mod_conf}
 
-install -d %{buildroot}/var/www/html/addon-modules
-ln -s ../../../..%{_docdir}/%{name}-%{version} %{buildroot}/var/www/html/addon-modules/%{name}-%{version}
-
 %post
 if [ -f /var/lock/subsys/httpd ]; then
     %{_initrddir}/httpd restart 1>&2;
@@ -72,6 +69,3 @@ fi
 %doc CHANGELOG GPL.txt README examples/htaccess-example examples/httpd.conf-append-example
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/httpd/modules.d/%{mod_conf}
 %attr(0755,root,root) %{_libdir}/apache-extramodules/%{mod_so}
-/var/www/html/addon-modules/*
-
-
