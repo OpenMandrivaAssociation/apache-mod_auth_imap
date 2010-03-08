@@ -6,7 +6,7 @@
 Summary:	Provides authentication against an IMAP mail server
 Name:		apache-%{mod_name}
 Version:	2.2.0
-Release:	%mkrel 9
+Release:	%mkrel 10
 Group:		System/Servers
 License:	GPL
 URL:		http://ben.brillat.net/projects/mod_auth_imap/
