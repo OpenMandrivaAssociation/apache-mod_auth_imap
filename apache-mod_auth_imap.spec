@@ -9,7 +9,7 @@ Version:	2.2.0
 Release:	14
 Group:		System/Servers
 License:	GPL
-URL:		http://ben.brillat.net/projects/mod_auth_imap/
+URL:		https://ben.brillat.net/projects/mod_auth_imap/
 Source0:	http://ben.brillat.net/files/projects/mod_auth_imap2/mod_auth_imap2-%{version}.tar.bz2
 Source1:	%{mod_conf}.bz2
 Requires(pre): rpm-helper
